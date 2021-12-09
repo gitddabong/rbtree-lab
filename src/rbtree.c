@@ -224,7 +224,7 @@ int rbtree_erase(rbtree *t, node_t *z) {
     y_ori_color = y->color;
     x = y->right;
     if (y->parent == z)
-      x->parent = z;
+      x->parent = y;
     else{
       rb_transplant(t, y, y->right);
       y->right = z->right;
